@@ -10,7 +10,16 @@
  */
 
 // TODO: loginRequest 함수를 작성하세요.
-async function loginRequest(id, pw) {}
+async function loginRequest(id, pw) {
+    return new Promise((resolve) => {
+        // 만약 id가 "admin"이고 pw가 "1234"인 경우 ok
+        if(id === "admin" && pw === "1234") {
+            resolve("ok");
+        }else {
+            resolve("fail");
+        }
+    })
+}
 
 // export를 수정하지 마세요.
 export { loginRequest };
